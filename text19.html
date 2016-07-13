@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 20</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0088CC" vlink="#0088CC" alink="#0088CC">
+<center>
+<a href="text0.html">First page</a> <a href="text18.html">Back</a> Continue Last page <a href="debugging.html">Overview</a> <a href="img19.html">Graphics</a></center><br>
+<h1>Stochastic or Bayesian profiling</h1>
+<ul>
+<li>Good for performance bottlenecks.</li>
+<li>Remember how to do it..</li>
+<ul>
+<li>Record stack traces from the system while it's being slow.</li>
+<ul>
+<li>Kill -3 &lt;pid&gt; on a JRE will  dump it to stderr.</li>
+<ul>
+<li>You are logging with a time stamp aren't you!</li>
+</ul>
+</ul>
+<li>Repeat 3-5 times.</li>
+<ul>
+<li>It's important to do it human-timed to be really random.</li>
+</ul>
+<li>Compare all sets of stack traces.</li>
+<ul>
+<li>Whatever is in most of them is your problem</li>
+</ul>
+</ul>
+<li>When every section of code is equally likely, it stops working.</li>
+<ul>
+<li>So either it's all good, or all bad.</li>
+</ul>
+</ul>
+</body>
+</html>
