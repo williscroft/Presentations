@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 9</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0088CC" vlink="#0088CC" alink="#0088CC">
+<center>
+<a href="text0.html">First page</a> <a href="text7.html">Back</a> <a href="text9.html">Continue</a> <a href="text11.html">Last page</a> <a href="short-talk-immutable.html">Overview</a> <a href="img8.html">Graphics</a></center><br>
+<h1>State Machine driver</h1>
+<ul>
+<li>Class StateMachine {</li>
+<ul>
+<li>private State currentState=IDLE;</li>
+<li>void input(Some input){</li>
+<ul>
+<ul>
+<li>State ns = currentState.input(input);</li>
+<li>currentState.leaving();</li>
+<li>ns.entering();</li>
+<li>currentState=ns;</li>
+</ul>
+<li>}</li>
+<li>private State IDLE= new State(){</li>
+<li>}</li>
+<li>private State ONE = …..</li>
+<li>private State TWO =…..</li>
+<li>TimerService timeoutService = new TimeoutService(….)</li>
+</ul>
+<li>}</li>
+<li>// Yeah old-school inner class goodness.</li>
+<li>// State interface can be inside the StateMachine too.</li>
+<ul>
+<li>States can be static or not, depending if you need access to outer machinery variables. (like timeouts)</li>
+</ul>
+</ul>
+</ul>
+</body>
+</html>
